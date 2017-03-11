@@ -4,14 +4,14 @@
 // TA: Cherie Ruan
 // Assingment #1
 // 
-// This class keeps an inventory of the count of letters in a string ignoring case
+// This class keeps an inventory of the count of letters in a string
 public class LetterInventory {
    public static final int ALL_LETTERS = 26; // 26 is the number of letters in the alphabet
    public static final int ASCII_A = 97; // 97 is the ascii code for 'a'
    private int[] counter; 
    private int size;
    
-   // Constructor takes in a string and keeps count of 
+   // Constructor takes in a string and increments the counter to keep count of 
    // each occurence of a letter
    public LetterInventory(String data) {
       counter = new int[ALL_LETTERS];
@@ -34,7 +34,7 @@ public class LetterInventory {
       return counter[(int) Character.toLowerCase(letter) - ASCII_A];
    }
    
-   // returns true if this LetterInventory contains a count of any letter and false if not
+   // returns whether this LetterInventory contains a count of any letter
    public boolean isEmpty() {
       return size == 0;
    }
@@ -56,7 +56,7 @@ public class LetterInventory {
       return s + "]";
    }
    
-   // Takes in a char and an int, if the char is not a letter or if int is less than 0, throws
+   // Takes in a char and an int, if the char is not a letter, throws
    // an IllegalArguementException, otherwise changes the count of 
    // the char to the value
    public void set(char letter, int value) {
